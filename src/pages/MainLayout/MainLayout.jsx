@@ -1,5 +1,5 @@
 
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 // import Footer from "../footer/Footer";
 
 
@@ -13,13 +13,11 @@ const MainLayout = () => {
         </div>
         <nav>
           <ul className="flex gap-5" >
-            <li>Header</li>
-            <li>Home</li>
-            <li>Product</li>
-            <li>Contact</li>
+            <Link to="/dashboard" > Dashboard </Link>
+            <Link to="/product" >Product</Link>
+            <Link to="/home" >Home</Link>
           </ul>
         </nav>
-
       </section>
       <div className="min-h-screen" >
         <Outlet></Outlet>

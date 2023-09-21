@@ -11,26 +11,21 @@ import Dashboard from './pages/Dashboard/Dashboard'
 
 const myCreatedRouter = createBrowserRouter([
   {
-
     path: "/",
     element: <MainLayout></MainLayout>,
-
-
     children: [
       {
         path: "/dashboard",
         element: <Dashboard></Dashboard>,
       },
-
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('https://dummyjson.com/products/1')
-
       },
       {
-        path: "/product",
+        path: "/product/",
         element: <Product></Product>,
+        loader: () => fetch('https://jsonplaceholder.typicode.com/users'),
       },
     ]
 
